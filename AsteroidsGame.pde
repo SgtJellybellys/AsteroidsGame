@@ -25,7 +25,7 @@ public void draw()
 
 public void keyTyped()
 {
-  if(key == 'q')
+  if(key=='q')
   {
     enterprise.setX((int)(Math.random()*900));
     enterprise.setY((int)(Math.random()*600));
@@ -34,11 +34,15 @@ public void keyTyped()
   {
     enterprise.accelerate(10);
   }
-  else if(key == 'a')
+  else if(key=='s')
+  {
+    enterprise.accelerate(-10);
+  }
+  else if(key=='a')
   {
     enterprise.turn(-20);
   }
-  else if(key == 'd')
+  else if(key=='d')
   {
     enterprise.turn(20);
   }
