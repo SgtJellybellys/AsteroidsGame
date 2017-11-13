@@ -1,11 +1,11 @@
-Spaceship enterprise = new Spaceship(500,500);
-Stars[] space = new Stars[750];
+Spaceship enterprise=new Spaceship(500,500);
+Stars[] space=new Stars[750];
 public void setup() 
 {
   size(1000,1000);
   for (int i=0;i<space.length;i++)
   {
-    space[i] = new Stars();
+    space[i]=new Stars();
   }
   enterprise.setDirectionX(500);
   enterprise.setDirectionY(500);
@@ -30,7 +30,7 @@ public void keyTyped()
     enterprise.setX((int)(Math.random()*900));
     enterprise.setY((int)(Math.random()*600));
   }   
-  else if(key == 'w')
+  else if(key=='w')
   {
     enterprise.accelerate(10);
   }
