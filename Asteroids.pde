@@ -66,7 +66,6 @@ class asteroids extends Floater
     {    
       myCenterY=0;    
     }
-    
     else if (myCenterY < 0)
     {     
       myCenterY = height;    
