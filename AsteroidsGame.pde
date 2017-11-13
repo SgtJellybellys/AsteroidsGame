@@ -1,4 +1,5 @@
 Spaceship enterprise=new Spaceship(500,500);
+asteroids[]group=new asteroids[40];
 Stars[] space=new Stars[750];
 public void setup() 
 {
@@ -9,6 +10,12 @@ public void setup()
   }
   enterprise.setDirectionX(500);
   enterprise.setDirectionY(500);
+  for (int i = 0; i < group.length; i++)
+  {
+    group[i]=new asteroids((int)(Math.random()*100),(int)(Math.random()*1000));
+    group[i].setX((int)(Math.random()*1000));
+    group[i].setY((int)(Math.random()*1000));  
+  }
 }
 public void draw() 
 {
@@ -21,14 +28,19 @@ public void draw()
   enterprise.move();
   enterprise.setDirectionX(0);
   enterprise.setDirectionY(0);
+  for(int i = 0; i < group.length; i++)
+  {
+   group[i].show();
+   group[i].move();
+  }
 }
 
 public void keyTyped()
 {
   if(key=='q')
   {
-    enterprise.setX((int)(Math.random()*900));
-    enterprise.setY((int)(Math.random()*600));
+    enterprise.setX((int)(Math.random()*1000));
+    enterprise.setY((int)(Math.random()*1000));
   }   
   else if(key=='w')
   {
